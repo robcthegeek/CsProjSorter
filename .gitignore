@@ -171,8 +171,4 @@ UpgradeLog*.htm
 *.bim_*.settings
 
 # Microsoft Fakes
-<<<<<<< HEAD
 FakesAssemblies/
-=======
-FakesAssemblies/
->>>>>>> File > New Project
