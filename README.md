@@ -16,6 +16,7 @@ Anyway - let's see how this pans out :smile:
 ### ROADMAP
 
 - Collapse multiple `ItemGroup` nodes (with the same 'Child' types - `Compile`, `Reference` etc) into a single node.
+- Ensure that duplicate items are removed.
 - Get CLI created so we can just throw a CSPROJ file at it.
 - Add validation of the document at the end to check for things like unclosed nodes etc.
 
