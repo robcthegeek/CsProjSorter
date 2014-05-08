@@ -27,5 +27,13 @@ namespace CSProjSorter.Tests.Samples
                 return Load("Simple");
             }
         }
+        
+        public static string Duplicates
+        {
+            get
+            {
+                return Load("Duplicates");
+            }
+        }
     }
 }

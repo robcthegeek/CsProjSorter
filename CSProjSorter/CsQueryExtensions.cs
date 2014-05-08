@@ -29,7 +29,7 @@ namespace CSProjSorter
             foreach (var child in node.ChildNodes)
             {
                 var value = GetValueBasedOnNode(child);
-                if (!string.IsNullOrWhiteSpace(value))
+                if (!string.IsNullOrWhiteSpace(value) && !buffer.ContainsKey(value))
                 {
                     buffer.Add(value, child);
                 }

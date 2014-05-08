@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using CSProjSorter.Tests.Samples;
 using Xunit;
@@ -58,6 +59,19 @@ namespace CSProjSorter.Tests
 
             Assert.True(idxC > idxB, "EmbeddedResource C doesn't seem to be after EmbeddedResource B.");
             Assert.True(idxB > idxA, "EmbeddedResource B doesn't seem to be after EmbeddedResource A.");
+        }
+        
+        [Fact]
+        public void Sort_ProjectWithDuplicates_RemovesDuplicates()
+        {
+            var source = SampleFile.Duplicates;
+            var sorter = new ProjectFileSorter(source);
+            var result = sorter.Sort();
+            var refB = Regex.Matches(result, "ReferenceB").Count;
+            var comB = Regex.Matches(result, "CompileB").Count;
+
+            Assert.Equal(1, refB);
+            Assert.Equal(1, comB);
         }
     }
 }
