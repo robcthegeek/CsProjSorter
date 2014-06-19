@@ -35,5 +35,13 @@ namespace CSProjSorter.Tests.Samples
                 return Load("Duplicates");
             }
         }
+        
+        public static string MultipleItemGroups
+        {
+            get
+            {
+                return Load("MultipleItemGroups");
+            }
+        }
     }
 }

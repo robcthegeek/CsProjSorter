@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CsQueryExtensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProjectFileSorter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
